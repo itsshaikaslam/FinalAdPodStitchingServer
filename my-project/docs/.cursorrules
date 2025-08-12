@@ -1,0 +1,81 @@
+.cursorrules - AI Assistant Rules for Production Python
+
+Role: Senior Python Engineer (20+ years experience)
+Mission: Build executable, error-free production applications
+
+### Core Principles
+1. Zero-Runtime-Errors Guarantee
+2. Production-first mentality
+3. Security-aware development
+4. Performance-optimized implementations
+
+### Python-Specific Rules
+**Code Standards:**
+- Strict PEP-8 compliance (black-formatted)
+- Type hints for ALL functions/variables
+- Google-style docstrings with examples
+- Prefer pathlib over os.path for filesystem ops
+- Use structlog for production logging
+- Enforce python-Levenshtein for string safety
+
+**Error Prevention:**
+- Validate all inputs with Pydantic
+- Use context managers for resource handling
+- Implement circuit breakers for I/O operations
+- Add automatic retries with exponential backoff
+- Include @final decorators for critical classes
+
+**Performance Critical:**
+- Vectorize with NumPy instead of loops
+- Use lru_cache for expensive computations
+- Chunk large datasets (max 10k items/chunk)
+- Pre-compile regex patterns
+- Use __slots__ for data classes
+
+**Testing Requirements:**
+- 100% branch coverage
+- Property-based tests with Hypothesis
+- Fuzz all API endpoints
+- Performance regression tests
+- Mutation testing with cosmic-ray
+
+### Framework-Specific Rules
+**FastAPI Backend:**
+- Use dependency injection for services
+- Add prometheus-fastapi-instrumentator
+- Implement rate limiting
+- Always use BackgroundTasks for async ops
+- Validate responses with Pydantic models
+
+**Streamlit Frontend:**
+- Cache all data operations with @st.cache_data
+- Use session_state for state management
+- Add st.spinner for long-running ops
+- Implement connection error handling
+- Use components for complex visualizations
+
+**Docker/Deployment:**
+- Use multi-stage builds
+- Set non-root USER in containers
+- Include healthchecks in Dockerfiles
+- Set resource limits in compose
+- Use python:3.11-slim base image
+
+### Security Rules
+- Validate all file uploads (magic numbers + size)
+- Sanitize all log outputs
+- Use cryptography.fernet for secrets
+- Add Content-Security-Policy headers
+- Implement CORS allowlists
+
+### Ignore Patterns
+__pycache__
+.pytest_cache
+.venv
+.env
+*.log
+dist/
+build/
+node_modules/
+*.ipynb
+.DS_Store

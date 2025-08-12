@@ -1,0 +1,4 @@
+*.pyc
+*.qodo
+*.pytest_cache
+*.Myvirtualenv
