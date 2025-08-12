@@ -61,8 +61,14 @@ Notes:
 
 ### 2) The Final Solution: 
 2.1) A list of which servers to activate: The Output is in optimization_result_json file in this Deliverable folder.
+
 2.2) The final assignment of each DMA to an activated server: The Output is in optimization_result_json file in this Deliverable folder.
-2.3) A cost breakdown: Total Setup Cost, Total Delivery Cost, and the final minimized Total Cost: The Output is in Output_Cost_breakdown Image file in this Deliverable folder.
+
+2.3) A cost breakdown: Total Setup Cost, Total Delivery Cost, and the final minimized Total Cost: The Output is in "Output_Cost_breakdown.png" Image file in this Deliverable folder which is as below: 
+
+"Total_setup_cost"   : 2197678.3723999998
+"Total_delivery_cost": 3239857.9032592773
+"Total_cost"         : 5437536.275659277
 
 
 
