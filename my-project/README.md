@@ -15,6 +15,8 @@ Each Designated Market Area (DMA) has:
 **Goal**: Minimize total cost (setup + delivery) by selecting servers to activate and assigning every DMA to exactly one activated server, while respecting server capacities.
 
 ## 🏗️ Architecture
+![alt text](image.png)
+
 
 - **Backend**: FastAPI with CFLP-Heuristic optimization engine
 - **Frontend**: Streamlit UI for data upload and results visualization
